@@ -1,1 +1,2 @@
-var temp =0
+var temp = 0;
+alert(temp);
