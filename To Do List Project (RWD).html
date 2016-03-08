@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="mysyle.css">
+  
+    <script>
+        var textIdNumber = 1;
+        var textInputName = 0;
+        var buttonName = 0;
+            
+            function deleteField (a) {
+                    var fieldToDelete = document.getElementById(a);
+                    //var buttonToDelete = document.getElementById(b);
+                    //console.log(b);
+                    fieldToDelete.parentNode.removeChild(fieldToDelete);
+                    //buttonToDelete.parentNode.removeChild(buttonToDelete);
+            } //function deleteField that deletes the specific text field
+            
+            function addField() {
+                var textInputName = "textField"+textIdNumber;
+                //var buttonName = "buttonNumber"+textIdNumber;
+                
+                document.getElementById("container").innerHTML += "<div id='"+textInputName+"'>"+
+                "<input class='ghost input' type='text' value='"+textInputName+"'>"+
+                "<input class='ghost btn_2' type='button' value='Delete Me' onclick='deleteField(\""+textInputName+"\")'></div>";
+                
+                textIdNumber +=1;
+                //if clearAllButton is pressed
+                //
+                //function deleteField deletes all buttons and reset textIdNumber to 1 when called
+                
+            } //function addField that creates new fields and is called by button addField
+            
+            
+            
+    </script>
+</head>
+<body>
+        <input class="center btn ghost" value="Click to Add Things" type = "submit" onclick = "addField()">
+        <!--a buttonAddField that add new field when clicked-->
+    <div class="center" id="container"></div>
+    
+    
+</body>
+</html>

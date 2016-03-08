@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <input type="button" onclick="addInput()"/>
+
+            <script>
+                var countBox =1;
+                var boxName = 0;
+                    function addInput()
+                         {
+    var boxName="textBox"+countBox; 
+    document.getElementById('responce').innerHTML+='<br/><input type="text" value="'+boxName+'"/><br/>';
+    countBox += 1;
+                           }
+            </script>
+    </head>
+<body>
+    <span id="responce"></span>
+</body>
+
+</html>
