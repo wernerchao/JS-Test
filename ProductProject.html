@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    
+    <head></head>
+    
+    <body>
+        <div id="list"></div>
+        <script>
+            
+            function myProduct(productList) {
+                var arr = JSON.parse(productList);
+                
+                
+                //var i = 0;
+                //var listToPrint = "<table>";
+                
+                    
+                /*for (i=0; i<arr.length; i++){
+                    listToPrint += "<tr><td>" 
+                     + arr[i].Therapist 
+                     + "</td><td>" 
+                     + arr[i].Specialty 
+                     + "</td><td>" + arr[i].Age 
+                     + "</td><td>" 
+                     + "arr[i].Sex" 
+                     + "</td></tr>";
+                }
+                listToPrint += "</table>";*/
+                
+                document.getElementById("list").innerHTML = arr[1].Therapist;
+        }
+        </script>
+              <script src="productData.js"></script>  
+    </body>
+    
+</html>
