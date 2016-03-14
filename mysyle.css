@@ -1,11 +1,22 @@
 .center {
     
-    margin: 200px;
-    /*margin-top: 20px;*/
+    margin: auto;
+    margin-top: 200px;
     width: 300px;
     height: auto;
 }
 
+.welcome {
+    background: #4ac00f;
+    color: #fff;
+    height: 100%;
+    /*width: 100%;*/
+    font-weight: 300;
+    font-family: "Source Sans Pro", Helvetica;
+    font-size: 20px;
+    line-height: 1.5;
+    
+}
 
 .btn {
   display: inline-block;
@@ -47,7 +58,7 @@
 
 .ghost {
   background-color: transparent;
-  color: orange;
+  color: blue;
   border: 1px solid orange;
   
   transition: .2s ease;

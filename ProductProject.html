@@ -1,36 +1,33 @@
 <!DOCTYPE html>
 <html>
-    
-    <head></head>
-    
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="mysyle.css">
+    </head>
     <body>
-        <div id="list"></div>
-        <script>
-            
-            function myProduct(productList) {
-                var arr = JSON.parse(productList);
-                
-                
-                //var i = 0;
-                //var listToPrint = "<table>";
-                
-                    
-                /*for (i=0; i<arr.length; i++){
-                    listToPrint += "<tr><td>" 
-                     + arr[i].Therapist 
-                     + "</td><td>" 
-                     + arr[i].Specialty 
-                     + "</td><td>" + arr[i].Age 
-                     + "</td><td>" 
-                     + "arr[i].Sex" 
-                     + "</td></tr>";
-                }
-                listToPrint += "</table>";*/
-                
-                document.getElementById("list").innerHTML = arr[1].Therapist;
-        }
-        </script>
-              <script src="productData.js"></script>  
+
+        <div class="center welcome">
+            <div id="list" class="ghost"></div>
+        </div>
+            <script>
+
+
+function myProduct(arr) {
+    var out = "<table>";
+    var i;
+   
+    for(i = 0; i<arr.length; i++) {
+        out += "<tr><td>" + 
+        arr[i].Therapist + "</td><td>" +
+        arr[i].Specialty + "</td><td>" +
+        arr[i].Age + "</td><td>" +
+        arr[i].Sex + "</td></tr>";
+    }
+    out += "</table>";
+    document.getElementById("list").innerHTML = out;
+}
+            </script>
+                <script src="productData.js"></script>
     </body>
     
 </html>
