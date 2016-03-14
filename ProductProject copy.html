@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="productProjectStyle.css">
+    </head>
+    <body>
+
+        <h1>Therapists</h1>
+            <div id="list"></div>
+        
+            <script>
+
+
+function myProduct(response) {
+    var arr = JSON.parse(response);
+    var out = "<table>";
+    var i;
+   
+    for(i = 0; i<arr.length; i++) {
+        out += "<tr><td>" + 
+        arr[i].Therapist + "</td><td>" +
+        arr[i].Specialty + "</td><td>" +
+        arr[i].Age + "</td><td>" +
+        arr[i].Sex + "</td></tr>";
+    }
+    out += "</table>";
+    document.getElementById("list").innerHTML = out;
+}
+            </script>
+                <script src="productData.js"></script>
+    </body>
+    
+</html>
