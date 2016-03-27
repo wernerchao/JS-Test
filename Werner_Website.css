@@ -1,6 +1,5 @@
 ul {
     list-style-type: none;
-    overflow: hidden;
     width: 100%;
     background-color: #333;
     position: fixed;
@@ -22,10 +21,11 @@ li a {
     color: white;
     text-align: center;
     padding: 14px 16px;
+    text-decoration: none;
 }
 
 
-li a:hover:not(.active) {
+li a:hover:not(.active) {   
     background-color: #808080;
 }
 
@@ -38,7 +38,6 @@ li a:hover:not(.active) {
 .dropdown {
     position: relative;
     display: inline-block;
-    
 }
 
 .dropdown-content {
@@ -51,11 +50,13 @@ li a:hover:not(.active) {
 
 .dropdown:hover .dropdown-content {
     display: block;
+    z-index: 9999;
 }
 
 
 .dropdown-content a {
-    color: black;
+    background-color: #333;
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
