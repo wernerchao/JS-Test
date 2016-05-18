@@ -1,18 +1,32 @@
+/*there are usually some default margin/padding for these elements
+you can use this to reset them to 0*/
+html, body, div, span, img {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* z-index this guy instead */
 ul {
     list-style-type: none;
     width: 100%;
     background-color: #333;
     position: fixed;
+    z-index: 9999;
     top: 0;
     margin: 0;
     padding: 0;
     left: 0;
-    
 }
 
-
+/* inline-block should work better than float as it is not as forceful. 
+But there a bug in some browsers that requires you to put the -2px left right margins
+or else you could have spaces between the items. To see the spaces, delete the negative
+margins here and change ul background-color to red */
 li {
     float: left;
+    /*display: inline-block;
+    margin-left: -2px;
+    margin-right: -2px;*/
 }
 
 
@@ -51,16 +65,12 @@ li a:hover:not(.active) {
 
 .dropdown:hover .dropdown-content {
     display: block;
-    z-index: 9999;
 }
 
-
+/* You had some bad merge conflicts here */
 .dropdown-content a {
-<<<<<<< HEAD
     color: #333;
-=======
     background-color: #333;
->>>>>>> d4f4b676d20fe88e3c2b0709be9392be50a311de
     color: white;
     padding: 12px 16px;
     text-decoration: none;
@@ -73,7 +83,6 @@ li a:hover:not(.active) {
     overflow: hidden;
     text-align: left;
     margin-top: 45px;
-    
 }
 
 h2 {
