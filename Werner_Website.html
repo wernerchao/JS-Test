@@ -8,11 +8,12 @@
         <title>Bootstrap 101 Template</title>
         <!-- Bootstrap -->
         <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-        
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="Werner_Website.css">
     </head>
     <body>
+        <div id="spacer"></div>
         <!-- The Nav Box Is Here -->
         <div id="nav">
             <ul>
@@ -24,7 +25,7 @@
                         <a href="#Testimonials">學生怎麼說</a>
                     </div>
                 </li>
-                
+
                 <li class="dropdown"><a href="#news">老師陣容</a>
                     <div class="dropdown-content">
                         <div>
@@ -37,92 +38,104 @@
                 <li><a href="#contactus">聯絡我們</a></li>
             </ul>
         </div> <!-- Nav Box Ends -->
-        
+
         <!-- Page 1 Home -->
                 <div id="page1" class="container-fluid">
-                    <a id="home" class="active smooth"></a>
-                            <img class="img" src="kyoto_3.jpg" alt="coffee">
-                            <h2>不要只學日文
-                            <br>學習日文和日本的文化
-                            <br>用日本的方法</h2>
+                    <div class="row">
+                        <a id="home" class="active smooth"></a>
+                        <img class="img" src="kyoto_3.jpg" alt="coffee">
+                        <h2>不要只學日文
+                        <br>學習日文和日本的文化
+                        <br>用日本的方法</h2>
+                    </div>
                 </div>
 
         <!-- Page 2 Start Learning Japanese -->
-                <div id="page2" class="dropdown" class="container-fluid">
-                    <a id="startlearningjapanese" class="smooth"></a>
-                            <img class="img" src="teach japanese_Fotor.jpg" alt="coffee">
-                            <button id="start" onclick="noFunctionYet()">開始學吧！</button>
+                <div id="page2" class="container-fluid">
+                    <div class="row">
+                        <a id="startlearningjapanese" class="smooth"></a>
+                        <img class="img" src="teach japanese_Fotor.jpg" alt="coffee">
+                        <button id="start" onclick="noFunctionYet()">開始學吧！</button>
+                    </div>
                 </div>
-            
+
         <!-- Page 3 News -->
                 <div id="page3" class="container-fluid">
-                    <a id="news" class="smooth"></a>
-                    
-                    <!-- Slider Starts Here -->
-                    <script type="text/javascript" src="slider.js"></script>
-                        <div id="jssor_1" style="position: relative; margin: 0px; top: 60px; left: 20px; width: 1000px; height: 600px; overflow: hidden; visibility: hidden;">
-                            <!-- Loading Screen -->
-                            <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
-                                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-                                <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+                    <div class="row">
+                        <a id="news" class="smooth"></a>
+
+                        <!-- Slider Starts Here -->
+                        <script type="text/javascript" src="slider.js"></script>
+                            <div id="jssor_1" style="position: relative; margin: 0px auto; width: 1000px; height: 600px; visibility: hidden;">
+                                <!-- Loading Screen -->
+                                <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+                                    <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                                    <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+                                </div>
+                                <div data-u="slides" style="cursor: default; top: 0px; left: 0px; width: 1200px; height: 600px; overflow: hidden;">
+                                    <div data-p="112.50" style="display: none;"><img data-u="image" src="img/teacher1.png" />
+                                        <div data-u="thumb"><img src="img/1.png" />
+                                            <div class="title_back"></div>
+                                            <div class="title"> Mon 老師 </div>
+                                        </div>
+                                    </div>
+                                    <div data-p="112.50" style="display: none;"><img data-u="image" src="img/teacher2.png" />
+                                        <div data-u="thumb"><img src="img/2.png" />
+                                            <div class="title_back"></div>
+                                            <div class="title"> Mii 老師 </div>
+                                        </div>
+                                    </div>
+                                    <div data-p="112.50" style="display: none;"><img data-u="image" src="img/teacher3.png" />
+                                        <div data-u="thumb"><img src="img/3.png" />
+                                            <div class="title_back"></div>
+                                            <div class="title"> Yasada 老師 </div>
+                                        </div>
+                                    </div><a data-u="ad" href="http://www.jssor.com" style="display:none">jQuery Slider</a></div>
+                                <!-- Thumbnail Navigator -->
+                                <div data-u="thumbnavigator" class="jssort16" style="position:absolute;left:0px;bottom:0px;width:600px;height:100px;" data-autocenter="1">
+                                    <!-- Thumbnail Item Skin Begin -->
+                                    <div data-u="slides" style="cursor: default;">
+                                        <div data-u="prototype" class="p">
+                                            <div data-u="thumbnailtemplate" class="t"></div>
+                                        </div>
+                                    </div>
+                                    <!-- Thumbnail Item Skin End -->
+                                </div>
+                                <!-- Bullet Navigator -->
+                                <div data-u="navigator" class="jssorb03" style="bottom:116px;right:16px;">
+                                    <!-- bullet navigator item prototype -->
+                                    <div data-u="prototype" style="width:21px;height:21px;">
+                                        <div data-u="numbertemplate"></div>
+                                    </div>
+                                </div>
                             </div>
-                            <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1200px; height: 600px; overflow: hidden;">
-                                <div data-p="112.50" style="display: none;"><img data-u="image" src="img/teacher1.png" />
-                                    <div data-u="thumb"><img src="img/1.png" />
-                                        <div class="title_back"></div>
-                                        <div class="title"> Mon 老師 </div>
-                                    </div>
-                                </div>
-                                <div data-p="112.50" style="display: none;"><img data-u="image" src="img/teacher2.png" />
-                                    <div data-u="thumb"><img src="img/2.png" />
-                                        <div class="title_back"></div>
-                                        <div class="title"> Mii 老師 </div>
-                                    </div>
-                                </div>
-                                <div data-p="112.50" style="display: none;"><img data-u="image" src="img/teacher3.png" />
-                                    <div data-u="thumb"><img src="img/3.png" />
-                                        <div class="title_back"></div>
-                                        <div class="title"> Yasada 老師 </div>
-                                    </div>
-                                </div><a data-u="ad" href="http://www.jssor.com" style="display:none">jQuery Slider</a></div>
-                            <!-- Thumbnail Navigator -->
-                            <div data-u="thumbnavigator" class="jssort16" style="position:absolute;left:0px;bottom:0px;width:600px;height:100px;" data-autocenter="1">
-                                <!-- Thumbnail Item Skin Begin -->
-                                <div data-u="slides" style="cursor: default;">
-                                    <div data-u="prototype" class="p">
-                                        <div data-u="thumbnailtemplate" class="t"></div>
-                                    </div>
-                                </div>
-                                <!-- Thumbnail Item Skin End -->
-                            </div>
-                            <!-- Bullet Navigator -->
-                            <div data-u="navigator" class="jssorb03" style="bottom:116px;right:16px;">
-                                <!-- bullet navigator item prototype -->
-                                <div data-u="prototype" style="width:21px;height:21px;">
-                                    <div data-u="numbertemplate"></div>
-                                </div>
-                            </div>
+                            <script>jssor_1_slider_init();</script>
+                            <!-- #endregion Jssor Slider End -->
                         </div>
-
-                        <script>jssor_1_slider_init();</script>
-                        <!-- #endregion Jssor Slider End -->
-
                 </div>
 
         <!-- Page 4 Abous Us -->
-                <div id="page4" class="container-fluid"><a id="aboutus" class="smooth"></a>
-                    <p id="p1">明奈線上日文學校
-                    <br>我們是一群喜愛日文、日本文化的年輕人。在自身經歷過去日本學日文的經驗，
-                        覺得學日文應該要跟上新網路 2.0 的時代。現在大部份的人學日文還是停留在人到補習班的習慣，
-                        跟大家一起開班，沒有足夠的人就不能開課。要上班了話，就難以學日文因為有時加班就會錯過一些課程，
-                        不但浪費錢，也會跟不上進度。
-                    <br>明奈線上日文學校是一個網路日語學校，因為創始人自己的需求，
-                        提供給想學日文的人一個適合自己進度、方便的解決方案。想學日文的人不但可以跟專業的老師學習日文，
-                        還可以透過我們的平台跟倒地日本人聊天，完完全全的讓自己沈浸在一個日文的環境。
-                        學習日語最快、最好的訣竅就是，讓自己融入日本人的文化、講日文的環境、和專業老師的指導。
-                    </p>
+                <div id="page4" class="container-fluid">
+                    <div class="row highlightedRow">
+                        <a id="aboutus" class="smooth"></a>
+                        <div class="section">
+                            <span class="heading1">明奈線上日文學校</span>
+                            <p>
+                                我們是一群喜愛日文、日本文化的年輕人。在自身經歷過去日本學日文的經驗，
+                                覺得學日文應該要跟上新網路 2.0 的時代。現在大部份的人學日文還是停留在人到補習班的習慣，
+                                跟大家一起開班，沒有足夠的人就不能開課。要上班了話，就難以學日文因為有時加班就會錯過一些課程，
+                                不但浪費錢，也會跟不上進度。
+                            </p>
+                            <p>
+                                明奈線上日文學校是一個網路日語學校，因為創始人自己的需求，
+                                提供給想學日文的人一個適合自己進度、方便的解決方案。想學日文的人不但可以跟專業的老師學習日文，
+                                還可以透過我們的平台跟倒地日本人聊天，完完全全的讓自己沈浸在一個日文的環境。
+                                學習日語最快、最好的訣竅就是，讓自己融入日本人的文化、講日文的環境、和專業老師的指導。
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            
+
         <!-- Page 5 Contact Us -->
                 <div id="page5" class="container_form"><a id="contactus" class="smooth"></a>
                     <h1>Send us a suggestion!</h1>
@@ -138,9 +151,9 @@
                         </div>
                         <footer>
                             <button>Send Suggestion</button>
-                        </footer> 
+                        </footer>
                 </div>
-            
+
 
         <!-- Javascript Scrolling Code -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -157,5 +170,5 @@
 <!--<script src="productData.js"></script>-->
 
     </body>
-    
+
 </html>

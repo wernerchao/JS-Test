@@ -1,7 +1,7 @@
 /*there are usually some default margin/padding for these elements
 you can use this to reset them to 0*/
 html, body, div, span, img {
-    margin: -10px;
+    margin: 0px;
     padding: 0px;
 }
 
@@ -18,7 +18,7 @@ ul {
     left: 0;
 }
 
-/* inline-block should work better than float as it is not as forceful. 
+/* inline-block should work better than float as it is not as forceful.
 But there a bug in some browsers that requires you to put the -2px left right margins
 or else you could have spaces between the items. To see the spaces, delete the negative
 margins here and change ul background-color to red */
@@ -39,7 +39,7 @@ li a {
 }
 
 
-li a:hover:not(.active) {   
+li a:hover:not(.active) {
     background-color: #808080;
 }
 
@@ -60,7 +60,7 @@ li a:hover:not(.active) {
     display: none;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px;
-    
+
 }
 
 .dropdown:hover .dropdown-content {
@@ -82,7 +82,7 @@ li a:hover:not(.active) {
     height: 600px;
     overflow: hidden;
     text-align: center;
-    margin-top: 30px;
+    width: 100%;
 }
 
 h2 {
@@ -99,7 +99,7 @@ h2 {
   top: 400px;
   left: 150px;
   width: 300px;
-  
+
   display: inline-block;
   box-sizing: content-box;
   cursor: pointer;
@@ -111,16 +111,6 @@ h2 {
   background: rgb(125,213,105);
   box-shadow: 1px 1px 0 0 #599f3f;
   text-shadow: 1px 1px 0 rgba(168,168,168,0.66) ;
-}
-
-#p1 {
-    position: relative;
-    color: #333333; 
-    font-family: Georgia, serif; 
-    font-size: 18px; 
-    line-height: 28px; 
-    margin: 50px 20px 20px 200px; 
-    width: 600px;
 }
 
 /*Slider CSS Starts Here*/
@@ -335,3 +325,25 @@ footer button:focus {
   color: rgba(51, 51, 51, 0.7);
 }
 /*Contact Form CSS Ends*/
+
+#spacer {
+  height: 48px;
+}
+
+.heading1 {
+  font-weight: bold;
+  font-size: 18pt;
+}
+
+.section {
+    color: #333333;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 100px auto;
+    width: 600px;
+}
+
+.highlightedRow {
+  background-color: lightgrey;
+}
