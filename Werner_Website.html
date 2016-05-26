@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,11 +12,14 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="Werner_Website.css">
+        <link rel="stylesheet" href="style.css">
+        
+
     </head>
     <body>
         <div id="spacer"></div>
         <!-- The Nav Box Is Here -->
-        <div id="nav">
+        <div id="nav" class="container-fluid">
             <ul>
                 <li><a href="#home">主頁</a></li>
                 <li class="dropdown"><a href="#startlearningjapanese">學日文</a>
@@ -63,55 +67,18 @@
                 <div id="page3" class="container-fluid">
                     <div class="row">
                         <a id="news" class="smooth"></a>
-
-                        <!-- Slider Starts Here -->
-                        <script type="text/javascript" src="slider.js"></script>
-                            <div id="jssor_1" style="position: relative; margin: 0px auto; width: 1000px; height: 600px; visibility: hidden;">
-                                <!-- Loading Screen -->
-                                <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
-                                    <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-                                    <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
-                                </div>
-                                <div data-u="slides" style="cursor: default; top: 0px; left: 0px; width: 1200px; height: 600px; overflow: hidden;">
-                                    <div data-p="112.50" style="display: none;"><img data-u="image" src="img/teacher1.png" />
-                                        <div data-u="thumb"><img src="img/1.png" />
-                                            <div class="title_back"></div>
-                                            <div class="title"> Mon 老師 </div>
-                                        </div>
-                                    </div>
-                                    <div data-p="112.50" style="display: none;"><img data-u="image" src="img/teacher2.png" />
-                                        <div data-u="thumb"><img src="img/2.png" />
-                                            <div class="title_back"></div>
-                                            <div class="title"> Mii 老師 </div>
-                                        </div>
-                                    </div>
-                                    <div data-p="112.50" style="display: none;"><img data-u="image" src="img/teacher3.png" />
-                                        <div data-u="thumb"><img src="img/3.png" />
-                                            <div class="title_back"></div>
-                                            <div class="title"> Yasada 老師 </div>
-                                        </div>
-                                    </div><a data-u="ad" href="http://www.jssor.com" style="display:none">jQuery Slider</a></div>
-                                <!-- Thumbnail Navigator -->
-                                <div data-u="thumbnavigator" class="jssort16" style="position:absolute;left:0px;bottom:0px;width:600px;height:100px;" data-autocenter="1">
-                                    <!-- Thumbnail Item Skin Begin -->
-                                    <div data-u="slides" style="cursor: default;">
-                                        <div data-u="prototype" class="p">
-                                            <div data-u="thumbnailtemplate" class="t"></div>
-                                        </div>
-                                    </div>
-                                    <!-- Thumbnail Item Skin End -->
-                                </div>
-                                <!-- Bullet Navigator -->
-                                <div data-u="navigator" class="jssorb03" style="bottom:116px;right:16px;">
-                                    <!-- bullet navigator item prototype -->
-                                    <div data-u="prototype" style="width:21px;height:21px;">
-                                        <div data-u="numbertemplate"></div>
-                                    </div>
-                                </div>
+                            <!-- Slider Starts Here -->
+                            <script type="text/javascript" src="my_slider.js"></script>
+                            <div id="slider">
+                                <ul class="slides">
+                                    <li class="slide"><img src="img/teacher1.png"/></li>
+                                    <li class="slide"><img src="img/teacher2.png"/></li>
+                                    <li class="slide"><img src="img/teacher3.png"/></li>
+                                    <li class="slide"><img src="img/teacher1.png"/></li>
+                                </ul>
                             </div>
-                            <script>jssor_1_slider_init();</script>
-                            <!-- #endregion Jssor Slider End -->
-                        </div>
+                            <!-- Slider Ends Here -->
+                    </div>
                 </div>
 
         <!-- Page 4 Abous Us -->
@@ -137,27 +104,35 @@
                 </div>
 
         <!-- Page 5 Contact Us -->
-                <div id="page5" class="container_form"><a id="contactus" class="smooth"></a>
-                    <h1>Send us a suggestion!</h1>
-                        <div class='name'>
-                            <input class='first' placeholder='First Name' type='text'>
-                            <input class='last' placeholder='Last Name' type='text'>
+                <div id="page5" class="container-fluid">
+                    <a id="contactus" class="smooth"></a>
+                        <div class="row section">
+                            <div id="form-messages"></div>
+                            <form id="ajax-contact" method="post" action="mailer.php">
+                                <div class="field">
+                                    <label for="name">姓名:</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="field">
+                                    <label for="email">Email:</label>
+                                    <input type="text" id="email" name="email" required>
+                                </div>
+                                <div class="field">
+                                    <label for="phone">電話:</label>
+                                    <input type="text" id="phone" name="phone" required>
+                                </div>
+                                <div class="field">
+                                    <button type="submit">寄出:</button>
+                                </div>
+                                <script src="jquery-2.1.0.min.js"></script>
+                                <script src="app.js"></script>
                         </div>
-                        <div class='contact'>
-                            <input class='email' placeholder='E-mail Address' type='text'>
-                        </div>
-                        <div class='message'>
-                            <textarea placeholder='Your Suggestions Here!'></textarea>
-                        </div>
-                        <footer>
-                            <button>Send Suggestion</button>
-                        </footer>
-                </div>
+                  </div>
 
 
         <!-- Javascript Scrolling Code -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        <script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
+
+        
         <script>
             $('.smooth').on('click', function() {
             $.smoothScroll({
